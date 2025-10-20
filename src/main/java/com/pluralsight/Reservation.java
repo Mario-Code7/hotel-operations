@@ -16,7 +16,7 @@ public class Reservation {
         return roomType;
     }
 
-    public double getPricePerNight() {
+    public double getPrice() {
         return pricePerNight;
     }
 
@@ -28,12 +28,11 @@ public class Reservation {
         return weekend;
     }
 
-    public double getReservationTotal(){
-        double total = pricePerNight * numberOfNights;
-        return total;
+    public double getReservationTotal(){//deprived getter
+        return pricePerNight * numberOfNights;
     }
 
-    public void setRoomType(String roomType) {
+    private void setRoomType(String roomType) {
         this.roomType = roomType.toLowerCase();
 
         switch (this.roomType) {

@@ -31,7 +31,7 @@ public class Room {
         return dirty;
     }
 
-    public boolean available() {
+    public boolean available() {//deprived getter
         return !occupied && !dirty;
     }
 }
