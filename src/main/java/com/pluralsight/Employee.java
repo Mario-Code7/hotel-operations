@@ -35,5 +35,17 @@ public class Employee {
         return hoursWorked;
     }
 
-    public void
+    public double getRegularHours() {
+        return Math.min(40, hoursWorked);
+    }
+
+    public double getOvertimeHours(){
+        return Math.max(0, hoursWorked - 40);
+    }
+
+    public double getTotalPay(){
+        double regularPay = getRegularHours() * payRate;
+        double overtimePay = getOvertimeHours() * payRate * 1.5;
+        return regularPay * overtimePay;
+    }
 }

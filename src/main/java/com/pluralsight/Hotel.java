@@ -1,11 +1,13 @@
 package com.pluralsight;
 
-import java.util.Scanner;
+
 
 public class Hotel {
-    static final Scanner myScanner = new Scanner(System.in);
-
     public static void main(String[] args) {
+    Reservation reservation = new Reservation("King", 1, false);
+        System.out.println(reservation.getReservationTotal());
 
+        Employee employee = new Employee("1220002", "John", "Killer", 30, 60);
+        System.out.println(employee.getTotalPay());
     }
 }
