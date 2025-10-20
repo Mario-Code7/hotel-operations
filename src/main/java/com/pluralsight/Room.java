@@ -15,11 +15,11 @@ public class Room {
         this.available = available;
     }
 
-    public int numberOfBeds() {
+    public int getNumberOfBeds() {
         return numberOfBeds;
     }
 
-    public double price() {
+    public double getPrice() {
         return price;
     }
 
