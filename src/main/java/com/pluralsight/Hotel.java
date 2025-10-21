@@ -17,6 +17,7 @@ public class Hotel {
         this.bookedSuites = 0;
         this.bookedBasicRooms = 0;
     }
+
     public Hotel(String name, int numberOfSuites, int numberOfRooms, int bookedSuites, int bookedBasicRooms) {
         this.name = name;
         this.numberOfSuites = numberOfSuites;
@@ -35,13 +36,27 @@ public class Hotel {
     }
 
 
-
     public boolean bookRoom(int numberOfRooms, boolean isSuite) {
-        if (getAvailableRooms() >= numberOfRooms) {
+        boolean isBasicRoom = !isSuite;
+        if (isBasicRoom && (getAvailableRooms() >= numberOfRooms)) {
             bookedBasicRooms += numberOfRooms;
             return true;
-        } else {
-            return false;
         }
+        if (isSuite && (getAvailableSuites() >= numberOfSuites)) {
+            bookedSuites += numberOfRooms;
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "name='" + name + '\'' +
+                ", numberOfSuites=" + numberOfSuites +
+                ", numberOfRooms=" + numberOfRooms +
+                ", bookedSuites=" + bookedSuites +
+                ", bookedBasicRooms=" + bookedBasicRooms +
+                '}';
     }
 }
