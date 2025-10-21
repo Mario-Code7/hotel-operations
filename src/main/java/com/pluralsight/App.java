@@ -1,8 +1,5 @@
 package com.pluralsight;
 
-
-import javax.swing.*;
-
 public class App {
     public static void main(String[] args) {
 //    Reservation reservation = new Reservation("King", 1, false);
@@ -24,7 +21,6 @@ public class App {
         } else {
             System.out.println("See ya later nerd!");
         }
-
 
     }
 }
