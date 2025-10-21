@@ -2,7 +2,7 @@ package com.pluralsight;
 
 
 
-public class HotelApp {
+public class App {
     public static void main(String[] args) {
     Reservation reservation = new Reservation("King", 1, false);
         System.out.println(reservation.getReservationTotal());
