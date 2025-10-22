@@ -31,7 +31,7 @@ public class Room {
         cleanRoom();
     }
 
-    private void cleanRoom(){
+    public void cleanRoom(){
        dirty = false;
     }
 

@@ -32,7 +32,7 @@ public class Reservation {
         return pricePerNight * numberOfNights;
     }
 
-    private void setRoomType(String roomType) {
+    public void setRoomType(String roomType) {
         this.roomType = roomType.toLowerCase();
 
         switch (this.roomType) {
